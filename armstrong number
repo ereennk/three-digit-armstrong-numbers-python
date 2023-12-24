@@ -1,0 +1,15 @@
+number=int(input("bir değer giriniz "))
+def is_armstrong_number(number):
+  
+    if 100 <= number <= 999:
+        ilk_basamak = int(number/100)
+        ikinci_basamak = int((number%100)/10)
+        ücüncü_basamak = number%10
+        kuplerin_toplami = ilk_basamak**3+ikinci_basamak**3+ücüncü_basamak**3
+        if number == kuplerin_toplami:
+            print("girilen sayı bir armstrong sayısıdır")
+        else:
+            print("girilen sayı bir armstrong sayısı değildir")
+    else:
+        print("üç basamaklı bir sayı giriniz")
+is_armstrong_number(number)
